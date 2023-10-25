@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+
+
+
+{%block content %}
+<h1 class="poststitle">posts page</h1>
+{% if user.is_authenticated %}
+<p class="iden">User: {{ user.username }}</p>
+{% endif %}
+{% for Poost in poosts%}
+<img class="con1" src="https://htmlcolorcodes.com/assets/images/colors/off-white-color-solid-background-1920x1080.png" alt="asd">
+<div class="con">
+    <a style="font-size: 25px;" class="inline" href="#">{{Poost.author}}</a>
+    <p class="inline">{{Poost.created_at}}</p>
+    <h4 class="title1">{{Poost.title}}</h4>
+    <p class="data">{{ Poost.content }}</p>
+</div>
+{% endfor %}
+
+{% endblock content%}

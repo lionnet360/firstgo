@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+    {% block content %}
+    <form class="ccccc" method="post">
+        <p style="font-size: 230%; font-weight: bold;">Register To BfitUnity</p>
+        {{ formm.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="Register">
+        <p>
+            <p style="font-size: 100%;">Already have an account</p>
+            <a style="font-size: 100%;" href="{% url 'logg' %}">Login</a>
+        </p>
+    </form>
+    {% endblock content %}
+</body>
+
+</html>
