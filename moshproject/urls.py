@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("play.urls")),
+    path("https://lionnet360.github.io/firstgo/", include("play.urls")),
     path('members/', include('django.contrib.auth.urls')),
     path('members/', include('members.urls')),
 ]
